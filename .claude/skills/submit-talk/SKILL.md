@@ -5,7 +5,7 @@ description: Use when submitting a talk proposal to the BoulderJS talks repo, cr
 
 # Submit a BoulderJS Talk Proposal
 
-Creates a GitHub issue in `boulder-js/talks` using the correct format and label. Labels cannot be applied by regular users — they must be set via `--label` in the CLI.
+Creates a GitHub issue in `boulder-js/talks` using the correct issue template. Templates automatically apply labels — no label-write permission needed.
 
 ## Required Information
 
@@ -21,20 +21,20 @@ Collect from context or ask the user one at a time:
 
 Code of Conduct is always checked — include it unconditionally.
 
-## Talk Types & Labels
+## Talk Types & Templates
 
-| Type | Duration | Label |
+| Type | Duration | Template |
 | --- | --- | --- |
-| Feature | 25 min | `Talk: Feature :cinema:` |
-| Lightning | 10 min | `Talk: Lightning :zap:` |
+| Feature | 25 min | `talk-feature.yml` |
+| Lightning | 10 min | `talk-lightning.yml` |
 
 ## Create the Issue
 
 ```bash
 gh issue create \
   --repo boulder-js/talks \
+  --template "talk-feature.yml" \
   --title "TITLE" \
-  --label "Talk: Feature :cinema:" \
   --body "$(cat <<'EOF'
 ### Abstract
 
@@ -55,7 +55,7 @@ EOF
 )"
 ```
 
-Set `- [x]` on the first-talk checkbox if applicable. Swap the label for `Talk: Lightning :zap:` for lightning talks.
+Use `--template "talk-lightning.yml"` for lightning talks. Set `- [x]` on the first-talk checkbox if applicable.
 
 ## After Creating
 
