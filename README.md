@@ -18,8 +18,8 @@ Container repository for the BoulderJS community. Each sub-project is an indepen
 Clone this repo, then clone each sub-project into it:
 
 ```bash
-git clone https://github.com/boulder-js/home boulderjs
-cd boulderjs
+git clone https://github.com/boulder-js/boulder-js
+cd boulder-js
 git clone https://github.com/boulder-js/website
 git clone https://github.com/boulder-js/events
 git clone https://github.com/boulder-js/talks
